@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+A personal site — engineering work on one side, everything else on the other.
+Next.js 16 (App Router) · React 19 · Tailwind v4 · Motion.
 
-First, run the development server:
+## Running it
+
+Needs **Node 20+** (there's an `.nvmrc` pinned to 22 — your shell defaults to 18):
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+nvm use && npm install && npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> `dev` and `build` pass `--webpack`. Turbopack (the Next 16 default) can't load
+> Tailwind v4's native binding inside its Node worker on this machine, so the CSS
+> step fails. Drop the flag if you move to a machine where Turbopack works — it's faster.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing the content
 
-## Learn More
+**Everything on the page comes from [`src/content/site.ts`](src/content/site.ts).**
+Name, tagline, projects, stack, timeline, hobbies, one-liner facts — edit that one
+file and the site follows. No component changes needed to swap in real content.
 
-To learn more about Next.js, take a look at the following resources:
+- `person` / `socials` — the header, hero and contact section
+- `projects` — one card each; `accent` is the gradient stripe on top
+- `stack` / `timeline` — the tools and the path sections
+- `hobbies` / `facts` — the "Beyond code" section; add as many as you like
+- `gallery` — the photo wall at the end of "Beyond code"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Photos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+No CMS — images live in [`public/images/`](public/images/README.md) and get
+referenced from `site.ts`. Portrait, per-project shots, per-hobby shots and the
+photo wall are all supported; `next/image` handles resizing, WebP and lazy loading.
 
-## Deploy on Vercel
+## Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+  app/            layout, globals.css (theme + background effects), page.tsx
+  components/     nav, hero, section shell, projects, stack-and-path, beyond
+  content/site.ts all copy and data
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Animations use `motion/react` and respect `prefers-reduced-motion` throughout.
+
+## Deploying
+
+Push to GitHub and import the repo on Vercel — no configuration needed.

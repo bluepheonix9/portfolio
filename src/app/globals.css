@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Warm, soft dark — closer to dusk than to a terminal. */
+  --background: #14110f;
+  --foreground: #f2ece4;
+  --muted: #a89e93;
+  --line: rgba(242, 236, 228, 0.1);
+  --card: rgba(242, 236, 228, 0.035);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-card: var(--card);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Soft washes of warm colour, drifting slowly. No grid, no neon. */
+.aurora {
+  position: fixed;
+  inset: -20%;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(45rem 38rem at 20% 15%, rgba(233, 168, 118, 0.2), transparent 65%),
+    radial-gradient(40rem 34rem at 85% 25%, rgba(198, 148, 160, 0.16), transparent 65%),
+    radial-gradient(48rem 38rem at 60% 95%, rgba(138, 168, 148, 0.16), transparent 65%),
+    radial-gradient(36rem 30rem at 5% 80%, rgba(214, 186, 130, 0.12), transparent 65%);
+  filter: blur(20px);
+  animation: drift 34s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(-1.5%, -1%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(2%, 2.5%, 0) scale(1.08);
+  }
+}
+
+/* Fine paper grain instead of grid lines. */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.gradient-text {
+  background: linear-gradient(100deg, #f0c99a, #e6a6a6 45%, #a9c6b0 85%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .aurora {
+    animation: none;
+  }
 }
