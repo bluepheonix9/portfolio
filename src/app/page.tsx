@@ -1,69 +1,128 @@
-import Image from "next/image";
+import { Beyond } from "@/components/beyond";
+import { Hero } from "@/components/hero";
+import { Reveal } from "@/components/motion-primitives";
+import { Nav } from "@/components/nav";
+import { Portrait } from "@/components/portrait";
+import { Projects } from "@/components/projects";
+import { Section } from "@/components/section";
+import { Research, Stack, Timeline } from "@/components/stack-and-path";
+import { community, education, experience, person, socials } from "@/content/site";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <>
+      <div className="aurora" aria-hidden />
+      <div className="grain" aria-hidden />
+
+      <Nav />
+
+      <main>
+        <Hero />
+
+        <Section id="about" eyebrow="01 — Who" title="A short version" lead={person.intro}>
+          <Portrait />
+        </Section>
+
+        <Section
+          id="work"
+          eyebrow="02 — Work"
+          title="Things I've built"
+          lead="Products I took from an idea to something real people can open."
+        >
+          <Projects />
+        </Section>
+
+        <Section
+          id="research"
+          eyebrow="03 — Research"
+          title="What I'm researching"
+          lead="Software you learn by drawing, not by typing."
+        >
+          <Research />
+        </Section>
+
+        <Section
+          id="experience"
+          eyebrow="04 — Experience"
+          title="Where I've worked"
+        >
+          <Timeline chapters={experience} />
+
+          <div className="mt-16">
+            <h3 className="font-mono text-sm text-muted">Community & societies</h3>
+            <div className="mt-8">
+              <Timeline chapters={community} />
+            </div>
+          </div>
+        </Section>
+
+        <Section
+          id="education"
+          eyebrow="05 — Education"
+          title="Where I studied"
+          lead="Bangkok to Auckland to Sydney."
+        >
+          <Timeline chapters={education} />
+        </Section>
+
+        <Section
+          id="stack"
+          eyebrow="06 — Tools"
+          title="What I reach for"
+          lead="The tools I know well enough to be opinionated about."
+        >
+          <Stack />
+        </Section>
+
+        <Section
+          id="beyond"
+          eyebrow="07 — Beyond code"
+          title="The other half"
+          lead="I'd be a pretty boring engineer if this was all I did. Here's everything else — the band, the pitch, the languages, the volunteering."
+        >
+          <Beyond />
+        </Section>
+
+        <Section
+          id="contact"
+          eyebrow="08 — Contact"
+          title="Let's build something"
+          lead="Hiring, collaborating, or just want to talk about any of the above — my inbox is open."
+        >
+          <Reveal>
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href={`mailto:${person.email}`}
+              className="inline-block text-2xl font-semibold tracking-tight break-all sm:text-4xl"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+              <span className="gradient-text">{person.email}</span>
+            </a>
+
+            <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 font-mono text-sm text-muted">
+              {socials.map((social) => (
+                <li key={social.label}>
+                  <a
+                    href={social.href}
+                    target={social.href.startsWith("http") ? "_blank" : undefined}
+                    rel="noreferrer"
+                    className="transition hover:text-foreground"
+                  >
+                    {social.label} ↗
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </Section>
       </main>
-    </div>
+
+      <footer className="border-t border-line px-6 py-10">
+        <div className="mx-auto flex max-w-5xl flex-wrap justify-between gap-4 font-mono text-sm text-muted">
+          <span>
+            © {new Date().getFullYear()} {person.name}
+          </span>
+          <span>Built with Next.js, Tailwind and too much coffee.</span>
+        </div>
+      </footer>
+    </>
   );
 }
