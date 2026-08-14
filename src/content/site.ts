@@ -261,15 +261,16 @@ export const gallery: Photo[] = [
     shape: "wide",
   },
   {
+    src: "/images/vinnies-bbq.jpg",
+    alt: "Four volunteers in Vinnies polos behind the barbecues",
+    caption: "Barbecue shift with the Vinnies crew",
+    shape: "tall",
+  },
+  {
     src: "/images/travel-bergen.jpg",
     alt: "Standing on a ridge above Bergen as the sun sets over the fjords",
     caption: "Sunset above Bergen, Norway",
     shape: "tall",
-  },
-  {
-    src: "/images/vinnies-van.jpg",
-    alt: "The Vinnies Van parked up at a community barbecue",
-    caption: "The Vinnies Van, out on a shift",
   },
   {
     src: "/images/travel-milan.jpg",
@@ -305,22 +306,23 @@ export const gallery: Photo[] = [
 export const hobbies: Hobby[] = [
   {
     title: "Could Be Tuesday",
-    icon: "🎸",
+    icon: "",
     blurb:
       "Indie rock band — I play bass guitar and sing. Digital Music was half my degree, so this " +
       "isn't a side quest so much as the other half of the job.",
     notes: ["Indie rock", "Bass & vocals", "Live shows"],
-    // image: "/images/band-live.jpg", // TODO: add the live shot
+    image: "/images/band-photo.JPG",
+    imageAlt: "The band at a live show",
   },
   {
-    title: "A cappella",
-    icon: "🎤",
+    title: "Acappella",
+    icon: "",
     blurb: "Sang with the Barbershop a cappella society — no instruments, all harmony.",
     notes: ["Barbersoc", "2024 & 2025"],
   },
   {
     title: "Futsal & football",
-    icon: "⚽️",
+    icon: "",
     blurb:
       "Futsal with No Ice, and a season of football in Sydney University Men's Div 4. The reason " +
       "Pickup exists in the first place.",
@@ -330,13 +332,13 @@ export const hobbies: Hobby[] = [
   },
   {
     title: "Volunteering",
-    icon: "🤝",
+    icon: "",
     blurb:
       "At Vinnies and at the food shelter — serving, organising events, and doing the unglamorous " +
       "admin that keeps it all running.",
     notes: ["St Vincent de Paul", "Food shelter", "Event organising"],
-    image: "/images/vinnies-bbq.jpg",
-    imageAlt: "Volunteering at a Vinnies community barbecue",
+    image: "/images/vinnies-van.jpg",
+    imageAlt: "The Vinnies Van parked up at a community barbecue",
   },
   {
     title: "Languages",
@@ -348,15 +350,6 @@ export const hobbies: Hobby[] = [
     image: "/images/padua-certificate.jpg",
     imageAlt:
       "Holding the certificate from the Summer School of Italian Culture in Padova",
-  },
-  {
-    title: "Travel",
-    icon: "🌏",
-    blurb:
-      "Bangkok, Auckland, Sydney, Padua — I've moved around enough that the map is the story.",
-    notes: ["TODO: list your countries"], // a proper travel map can go here
-    image: "/images/travel-batu-caves.jpg",
-    imageAlt: "At the Batu Caves in Malaysia",
   },
 ];
 

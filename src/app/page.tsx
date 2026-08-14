@@ -6,9 +6,19 @@ import { Portrait } from "@/components/portrait";
 import { Projects } from "@/components/projects";
 import { Section } from "@/components/section";
 import { Research, Stack, Timeline } from "@/components/stack-and-path";
+import { TravelMap } from "@/components/travel-map";
 import { community, education, experience, person, socials } from "@/content/site";
+import { buildWorldMap } from "@/lib/world";
 
 export default function Home() {
+  const world = buildWorldMap();
+
+  if (process.env.NODE_ENV !== "production" && world.unmatched.length > 0) {
+    console.warn(
+      `[travel map] couldn't place: ${world.unmatched.join(", ")} — check the spelling in src/content/travel.ts`,
+    );
+  }
+
   return (
     <>
       <div className="aurora" aria-hidden />
@@ -84,8 +94,19 @@ export default function Home() {
         </Section>
 
         <Section
+          id="travel"
+          eyebrow="08 — Travel"
+          title="Where I've been"
+          lead="Bangkok to Auckland to Sydney, and everywhere I could get to in between. Hover a country for the story; the faded ones are still on the list."
+        >
+          <Reveal>
+            <TravelMap world={world} />
+          </Reveal>
+        </Section>
+
+        <Section
           id="contact"
-          eyebrow="08 — Contact"
+          eyebrow="09 — Contact"
           title="Let's build something"
           lead="Hiring, collaborating, or just want to talk about any of the above — my inbox is open."
         >
