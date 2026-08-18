@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { facts, hobbies } from "@/content/site";
-import { Gallery } from "./gallery";
 import { RevealGroup, RevealItem } from "./motion-primitives";
 
 export function Beyond() {
@@ -66,10 +65,6 @@ export function Beyond() {
           </RevealItem>
         ))}
       </RevealGroup>
-
-      <div className="mt-16">
-        <Gallery />
-      </div>
     </>
   );
 }

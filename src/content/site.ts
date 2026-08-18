@@ -241,67 +241,6 @@ export type Hobby = {
   imageAlt?: string;
 };
 
-export type Photo = {
-  src: string;
-  alt: string;
-  caption?: string;
-  /** "tall" and "wide" take up more room in the gallery grid. */
-  shape?: "tall" | "wide" | "square";
-};
-
-/**
- * The photo wall at the end of "Beyond code".
- * Drop files in public/images/ and list them here — that's the whole workflow.
- */
-export const gallery: Photo[] = [
-  {
-    src: "/images/futsal-team.jpg",
-    alt: "The futsal team lined up on court before a game",
-    caption: "No Ice, before kick-off",
-    shape: "wide",
-  },
-  {
-    src: "/images/vinnies-bbq.jpg",
-    alt: "Four volunteers in Vinnies polos behind the barbecues",
-    caption: "Barbecue shift with the Vinnies crew",
-    shape: "tall",
-  },
-  {
-    src: "/images/travel-bergen.jpg",
-    alt: "Standing on a ridge above Bergen as the sun sets over the fjords",
-    caption: "Sunset above Bergen, Norway",
-    shape: "tall",
-  },
-  {
-    src: "/images/travel-milan.jpg",
-    alt: "At Milano Centrale station with a backpack",
-    caption: "Milano Centrale, mid-exchange",
-    shape: "tall",
-  },
-  {
-    src: "/images/futsal-medals.jpg",
-    alt: "The team with medals after a final at Sydney Uni",
-    caption: "Medals, finally",
-  },
-  {
-    src: "/images/travel-batu-caves.jpg",
-    alt: "In front of the golden statue and rainbow stairs at Batu Caves",
-    caption: "Batu Caves, Malaysia",
-    shape: "tall",
-  },
-  {
-    src: "/images/friends-pub.jpg",
-    alt: "Six friends around a table lined with pints of Guinness",
-    caption: "Six pints, six people, one photo",
-    shape: "wide",
-  },
-  {
-    src: "/images/friends-night.jpg",
-    alt: "A group selfie with friends on a night out",
-    caption: "The usual crowd",
-  },
-];
-
 /** The other half of the site. */
 export const hobbies: Hobby[] = [
   {
@@ -350,6 +289,16 @@ export const hobbies: Hobby[] = [
     image: "/images/padua-certificate.jpg",
     imageAlt:
       "Holding the certificate from the Summer School of Italian Culture in Padova",
+  },
+  {
+    title: "Travel",
+    icon: "🌏",
+    blurb:
+      "Seventeen countries so far, and a list that keeps getting longer. The map " +
+      "below has the full picture.",
+    notes: ["17 countries", "7 on the list"],
+    image: "/images/travel-bergen.jpg",
+    imageAlt: "Watching the sunset over the fjords above Bergen, Norway",
   },
 ];
 

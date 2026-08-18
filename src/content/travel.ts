@@ -9,35 +9,38 @@
 
 export type Place = {
   country: string;
-  /** Optional — shown in the tooltip. Keep it to a few words. */
+  /** Optional caption for the tooltip. Currently unused — names only. */
   note?: string;
 };
 
-/** Countries you've set foot in. */
+/** Countries I've set foot in. */
 export const visited: Place[] = [
-  { country: "Thailand", note: "Born and raised — Bangkok" },
-  { country: "Australia", note: "Home now — Sydney" },
-  { country: "New Zealand", note: "High school in Auckland" },
+  { country: "Thailand" },
   { country: "Laos" },
   { country: "Cambodia" },
   { country: "Myanmar" },
   { country: "Vietnam" },
   { country: "Philippines" },
   { country: "Singapore" },
-  { country: "Malaysia", note: "Batu Caves" },
+  { country: "Malaysia" },
   { country: "China" },
   { country: "Hong Kong" },
   { country: "Japan" },
-  { country: "England", note: "Shown as the United Kingdom" },
+  { country: "Australia" },
+  { country: "New Zealand" },
+  { country: "England" },
   { country: "Austria" },
-  { country: "Norway", note: "Sunset over Bergen" },
-  { country: "Italy", note: "Summer school in Padova, 2025" },
+  { country: "Italy" },
+  { country: "Norway" },
 ];
 
 /** Countries still on the list. */
 export const wishlist: Place[] = [
-  // TODO: replace these — they're placeholders so the "Want to go" filter
-  // has something to show.
-  { country: "Spain", note: "Two years of Spanish to justify" },
   { country: "Peru" },
+  { country: "Chile" },
+  { country: "Mexico" },
+  { country: "Switzerland" },
+  { country: "Kyrgyzstan" },
+  { country: "Jordan" },
+  { country: "Kenya" },
 ];
