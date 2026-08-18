@@ -43,4 +43,6 @@ export const wishlist: Place[] = [
   { country: "Kyrgyzstan" },
   { country: "Jordan" },
   { country: "Kenya" },
+  { country: "Egypt" },
+  { country: "Canada" },
 ];
