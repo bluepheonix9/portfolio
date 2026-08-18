@@ -57,18 +57,20 @@ export default function Home() {
           title="Where I've worked"
         >
           <Timeline chapters={experience} />
+        </Section>
 
-          <div className="mt-16">
-            <h3 className="font-mono text-sm text-muted">Community & societies</h3>
-            <div className="mt-8">
-              <Timeline chapters={community} />
-            </div>
-          </div>
+        <Section
+          id="community"
+          eyebrow="05 — Community"
+          title="Where I show up"
+          lead="Societies, volunteering and the teams I build things with for free."
+        >
+          <Timeline chapters={community} />
         </Section>
 
         <Section
           id="education"
-          eyebrow="05 — Education"
+          eyebrow="06 — Education"
           title="Where I studied"
           lead="Bangkok to Auckland to Sydney."
         >
@@ -77,7 +79,7 @@ export default function Home() {
 
         <Section
           id="stack"
-          eyebrow="06 — Tools"
+          eyebrow="07 — Tools"
           title="What I reach for"
           lead="The tools I know well enough to be opinionated about."
         >
@@ -86,7 +88,7 @@ export default function Home() {
 
         <Section
           id="beyond"
-          eyebrow="07 — Beyond code"
+          eyebrow="08 — Beyond code"
           title="The other half"
           lead="I'd be a pretty boring engineer if this was all I did. Here's everything else — the band, the pitch, the languages, the volunteering."
         >
@@ -95,7 +97,7 @@ export default function Home() {
 
         <Section
           id="travel"
-          eyebrow="08 — Travel"
+          eyebrow="09 — Travel"
           title="Where I've been"
           lead="Bangkok to Auckland to Sydney, and everywhere I could get to in between. Hover a country for the story; the faded ones are still on the list."
         >
@@ -106,7 +108,7 @@ export default function Home() {
 
         <Section
           id="contact"
-          eyebrow="09 — Contact"
+          eyebrow="10 — Contact"
           title="Let's build something"
           lead="Hiring, collaborating, or just want to talk about any of the above — my inbox is open."
         >
