@@ -1,3 +1,5 @@
+import { visited, wishlist } from "./travel";
+
 /**
  * Everything on the site comes from this file.
  * Anything marked TODO still needs your input.
@@ -294,9 +296,9 @@ export const hobbies: Hobby[] = [
     title: "Travel",
     icon: "🌏",
     blurb:
-      "Seventeen countries so far, and a list that keeps getting longer. The map " +
-      "below has the full picture.",
-    notes: ["17 countries", "7 on the list"],
+      "Countries collected the way other people collect records, and a list that keeps " +
+      "getting longer. The map below has the full picture.",
+    notes: [`${visited.length} countries`, `${wishlist.length} on the list`],
     image: "/images/travel-bergen.jpg",
     imageAlt: "Watching the sunset over the fjords above Bergen, Norway",
   },
