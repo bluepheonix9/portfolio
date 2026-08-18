@@ -27,7 +27,7 @@ export const person = {
 
 export const socials = [
   { label: "GitHub", href: "https://github.com/bluepheonix9" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/yourhandle" }, // TODO
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/naratorn-pisedtasalasai-07b752320" },
   { label: "Email", href: `mailto:${person.email}` },
 ];
 
