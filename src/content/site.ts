@@ -128,30 +128,6 @@ export const experience: Chapter[] = [
       "handling instruments and keeping track of everything in a busy clinic.",
   },
   {
-    when: "Jun 2026 — present",
-    what: "Head of Marketing",
-    where: "Software Engineering Society",
-    detail:
-      "Lead marketing strategy and content across social and digital channels to promote society " +
-      "events and initiatives.",
-  },
-  {
-    when: "Mar 2026 — present",
-    what: "Administration Volunteer",
-    where: "St Vincent de Paul Society",
-    detail:
-      "Manage client intake and maintain records in a computer-based database, streamlining " +
-      "workflows and working hands-on with CRM systems and data entry.",
-  },
-  {
-    when: "Jul 2024 — present",
-    what: "Software UI Team",
-    where: "Sydney Interplanetary Rover Initiative",
-    detail:
-      "Process and transform rover sensor data with Python and ROS2, building data pipelines and " +
-      "real-time Foxglove visualisations for operational telemetry. Also led the Initiative's website.",
-  },
-  {
     when: "Oct 2025 — Apr 2026",
     what: "Crewing Officer",
     where: "Showcall Crewing",
@@ -187,6 +163,30 @@ export const experience: Chapter[] = [
 ];
 
 export const community: Chapter[] = [
+  {
+    when: "Jun 2026 — present",
+    what: "Head of Marketing",
+    where: "Software Engineering Society",
+    detail:
+      "Lead marketing strategy and content across social and digital channels to promote society " +
+      "events and initiatives.",
+  },
+  {
+    when: "Mar 2026 — present",
+    what: "Administration Volunteer",
+    where: "St Vincent de Paul Society",
+    detail:
+      "Manage client intake and maintain records in a computer-based database, streamlining " +
+      "workflows and working hands-on with CRM systems and data entry.",
+  },
+  {
+    when: "Jul 2024 — present",
+    what: "Software UI Team",
+    where: "Sydney Interplanetary Rover Initiative",
+    detail:
+      "Process and transform rover sensor data with Python and ROS2, building data pipelines and " +
+      "real-time Foxglove visualisations for operational telemetry. Also led the Initiative's website.",
+  },
   {
     when: "Ongoing",
     what: "Mentor",
