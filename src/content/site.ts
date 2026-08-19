@@ -253,8 +253,6 @@ export type Hobby = {
   /** Optional card photo: "/images/whatever.jpg". */
   image?: string;
   imageAlt?: string;
-  /** Set for portrait photos so the card frames them tall instead of cropping. */
-  imagePortrait?: boolean;
 };
 
 /** The other half of the site. */
@@ -267,7 +265,6 @@ export const hobbies: Hobby[] = [
       "isn't a side quest so much as the other half of the job.",
     image: "/images/band-photo.JPG",
     imageAlt: "The band at a live show",
-    imagePortrait: true,
   },
   {
     title: "Acappella",
@@ -291,7 +288,6 @@ export const hobbies: Hobby[] = [
       "admin that keeps it all running.",
     image: "/images/vinnies-van.jpg",
     imageAlt: "The Vinnies Van parked up at a community barbecue",
-    imagePortrait: true,
   },
   {
     title: "Languages",
@@ -311,7 +307,6 @@ export const hobbies: Hobby[] = [
       "getting longer. The map below has the full picture.",
     image: "/images/travel-bergen.jpg",
     imageAlt: "Watching the sunset over the fjords above Bergen, Norway",
-    imagePortrait: true,
   },
 ];
 

@@ -19,11 +19,7 @@ export function Beyond() {
               className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-card transition-colors hover:border-white/20"
             >
               {hobby.image ? (
-                <div
-                  className={`relative w-full overflow-hidden ${
-                    hobby.imagePortrait ? "aspect-[3/4]" : "aspect-[4/3]"
-                  }`}
-                >
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
                   <Image
                     src={hobby.image}
                     alt={hobby.imageAlt ?? hobby.title}
