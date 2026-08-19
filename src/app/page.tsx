@@ -37,7 +37,7 @@ export default function Home() {
           id="work"
           eyebrow="02 — Work"
           title="Things I've built"
-          lead="Products I took from an idea to something real people can open."
+          lead="Things I've taken from a rough idea to something people can actually open and use."
         >
           <Projects />
         </Section>
@@ -46,7 +46,7 @@ export default function Home() {
           id="research"
           eyebrow="03 — Research"
           title="What I'm researching"
-          lead="Software you learn by drawing, not by typing."
+          lead="Learning software by drawing it out, not just typing it in."
         >
           <Research />
         </Section>
@@ -63,7 +63,7 @@ export default function Home() {
           id="community"
           eyebrow="05 — Community"
           title="Where I show up"
-          lead="Societies, volunteering and the teams I build things with for free."
+          lead="The societies, volunteering and teams I've ended up spending my time with."
         >
           <Timeline chapters={community} />
         </Section>
@@ -71,7 +71,7 @@ export default function Home() {
         <Section
           id="education"
           eyebrow="06 — Education"
-          title="Where I studied"
+          title="Where I've studied"
           lead="Bangkok to Auckland to Sydney."
         >
           <Timeline chapters={education} />
@@ -81,7 +81,7 @@ export default function Home() {
           id="stack"
           eyebrow="07 — Tools"
           title="What I reach for"
-          lead="The tools I know well enough to be opinionated about."
+          lead="The tools I've spent enough time with to have opinions about them."
         >
           <Stack />
         </Section>
@@ -90,7 +90,7 @@ export default function Home() {
           id="beyond"
           eyebrow="08 — Beyond code"
           title="The other half"
-          lead="I'd be a pretty boring engineer if this was all I did. Here's everything else — the band, the pitch, the languages, the volunteering."
+          lead="I'd be a pretty boring engineer if this was all I did. Here's the rest of it: music, sport, languages, travel and volunteering."
         >
           <Beyond />
         </Section>
@@ -99,7 +99,7 @@ export default function Home() {
           id="travel"
           eyebrow="09 — Travel"
           title="Where I've been"
-          lead="Bangkok to Auckland to Sydney, and everywhere I could get to in between. Hover a country for the story; the faded ones are still on the list."
+          lead="Bangkok to Auckland to Sydney, with quite a few stops in between. Hover over a country for the story. The faded ones are the places I'm hoping to get to next."
         >
           <Reveal>
             <TravelMap world={world} />
@@ -110,7 +110,7 @@ export default function Home() {
           id="contact"
           eyebrow="10 — Contact"
           title="Let's build something"
-          lead="Hiring, collaborating, or just want to talk about any of the above — my inbox is open."
+          lead="Hiring, collaborating, or just want to talk about something you've seen here? My inbox is open."
         >
           <Reveal>
             <a
@@ -143,7 +143,7 @@ export default function Home() {
           <span>
             © {new Date().getFullYear()} {person.name}
           </span>
-          <span>Built with Next.js, Tailwind and too much coffee.</span>
+          <span>Built with Next.js, Tailwind and probably too much coffee.</span>
         </div>
       </footer>
     </>
