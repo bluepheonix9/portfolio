@@ -50,7 +50,10 @@ export const person = {
 
 export const socials = [
   { label: "GitHub", href: "https://github.com/bluepheonix9" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/naratorn-pisedtasalasai-07b752320" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/naratorn-pisedtasalasai-07b752320",
+  },
   { label: "Email", href: `mailto:${person.email}` },
 ];
 
@@ -129,9 +132,18 @@ export const research = {
 };
 
 export const stack = [
-  { group: "Languages", items: ["TypeScript", "Python", "SQL"] },
-  { group: "Frontend", items: ["React", "Next.js", "React Native / Expo", "Tailwind"] },
-  { group: "Backend", items: ["FastAPI", "Node.js", "PostgreSQL", "Supabase", "REST APIs"] },
+  {
+    group: "Languages",
+    items: ["TypeScript", "JavaScript", "Python", "Java", "C", "SQL"],
+  },
+  {
+    group: "Frontend",
+    items: ["React", "Next.js", "React Native / Expo", "Tailwind"],
+  },
+  {
+    group: "Backend",
+    items: ["FastAPI", "Node.js", "PostgreSQL", "Supabase", "REST APIs"],
+  },
   { group: "Platform", items: ["Docker", "Azure", "Vercel", "ROS2", "Strapi"] },
 ];
 
@@ -331,13 +343,4 @@ export const hobbies: Hobby[] = [
     image: "/images/travel-bergen.jpg",
     imageAlt: "Watching the sunset over the fjords above Bergen, Norway",
   },
-];
-
-/** Short, punchy things that don't fit anywhere else. */
-export const facts = [
-  "Four languages, three countries lived in, and one very patient bass amp.",
-  "Half my degree was Computer Science. The other half was Digital Music.",
-  "I wrote a thesis about turning code into diagrams, then started building the app I wished " +
-    "I'd had when I was learning.",
-  "I've changed school countries twice and somehow still have the same football boots.",
 ];
