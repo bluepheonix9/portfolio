@@ -89,8 +89,8 @@ export const projects: Project[] = [
     role: "Creator",
     blurb:
       "A website for a group running challenge covering 3,307 km, with the aim of raising money " +
-      "for charity and bringing attention to suicide prevention. The challenge is planned for " +
-      "November 2026.",
+      "for the 3,307 lives lost in 2024 due to suicide in Australia. Helping charities and " +
+      "bringing attention to suicide prevention. The challenge is planned for November 2026.",
     tags: ["React", "Next.js", "Supabase", "Vercel"],
     year: "2026",
     accent: "from-teal-300 to-emerald-300",
