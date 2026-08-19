@@ -7,7 +7,13 @@ import { Projects } from "@/components/projects";
 import { Section } from "@/components/section";
 import { Research, Stack, Timeline } from "@/components/stack-and-path";
 import { TravelMap } from "@/components/travel-map";
-import { community, education, experience, person, socials } from "@/content/site";
+import {
+  community,
+  education,
+  experience,
+  person,
+  socials,
+} from "@/content/site";
 import { buildWorldMap } from "@/lib/world";
 
 export default function Home() {
@@ -72,7 +78,7 @@ export default function Home() {
           id="education"
           eyebrow="06 — Education"
           title="Where I've studied"
-          lead="Bangkok to Auckland to Sydney."
+          lead="Christchurch to Bangkok to Auckland to Sydney."
         >
           <Timeline chapters={education} />
         </Section>
@@ -125,7 +131,9 @@ export default function Home() {
                 <li key={social.label}>
                   <a
                     href={social.href}
-                    target={social.href.startsWith("http") ? "_blank" : undefined}
+                    target={
+                      social.href.startsWith("http") ? "_blank" : undefined
+                    }
                     rel="noreferrer"
                     className="transition hover:text-foreground"
                   >
@@ -143,7 +151,9 @@ export default function Home() {
           <span>
             © {new Date().getFullYear()} {person.name}
           </span>
-          <span>Built with Next.js, Tailwind and probably too much coffee.</span>
+          <span>
+            Built with Next.js, Tailwind and probably too much coffee.
+          </span>
         </div>
       </footer>
     </>
