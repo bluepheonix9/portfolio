@@ -36,8 +36,8 @@ export const person = {
   email: "nano.naratorn@gmail.com",
   resumeUrl: "/resume.pdf", // TODO: drop your resume PDF into public/
   /** Set once you've added a portrait — see public/images/README.md. */
-  portrait: "/images/portrait-milan.jpg",
-  portraitAlt: "At Milano Centrale station, mid-exchange",
+  portrait: "/images/graduation.jpg",
+  portraitAlt: "Graduating from the University of Sydney",
 };
 
 export const socials = [
@@ -270,6 +270,8 @@ export const hobbies: Hobby[] = [
     title: "Acappella",
     icon: "",
     blurb: "Sang with the Barbershop a cappella society — no instruments, all harmony.",
+    image: "/images/acappella.jpg",
+    imageAlt: "Singing lead at an a cappella showcase",
   },
   {
     title: "Futsal & football",
