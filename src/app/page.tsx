@@ -2,7 +2,7 @@ import { Beyond } from "@/components/beyond";
 import { Hero } from "@/components/hero";
 import { Reveal } from "@/components/motion-primitives";
 import { Nav } from "@/components/nav";
-import { Portrait } from "@/components/portrait";
+import { About } from "@/components/about";
 import { Projects } from "@/components/projects";
 import { Section } from "@/components/section";
 import { Research, Stack, Timeline } from "@/components/stack-and-path";
@@ -29,8 +29,8 @@ export default function Home() {
       <main>
         <Hero />
 
-        <Section id="about" eyebrow="01 — Who" title="A short version" lead={person.intro}>
-          <Portrait />
+        <Section id="about" eyebrow="01 — Who" title="A short version">
+          <About />
         </Section>
 
         <Section

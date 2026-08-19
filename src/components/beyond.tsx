@@ -19,7 +19,11 @@ export function Beyond() {
               className="group flex h-full flex-col overflow-hidden rounded-3xl border border-line bg-card transition-colors hover:border-white/20"
             >
               {hobby.image ? (
-                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <div
+                  className={`relative w-full overflow-hidden ${
+                    hobby.imagePortrait ? "aspect-[3/4]" : "aspect-[4/3]"
+                  }`}
+                >
                   <Image
                     src={hobby.image}
                     alt={hobby.imageAlt ?? hobby.title}
@@ -37,16 +41,6 @@ export function Beyond() {
               <h3 className="mt-4 text-lg font-semibold tracking-tight">{hobby.title}</h3>
               <p className="mt-2 text-sm text-muted">{hobby.blurb}</p>
 
-              <ul className="mt-auto flex flex-wrap gap-2 pt-6">
-                {hobby.notes.map((note) => (
-                  <li
-                    key={note}
-                    className="rounded-full bg-white/5 px-3 py-1 font-mono text-xs text-muted"
-                  >
-                    {note}
-                  </li>
-                ))}
-              </ul>
               </div>
             </motion.article>
           </RevealItem>

@@ -1,5 +1,3 @@
-import { visited, wishlist } from "./travel";
-
 /**
  * Everything on the site comes from this file.
  * Anything marked TODO still needs your input.
@@ -13,18 +11,33 @@ export const person = {
   tagline:
     "I build things people actually use — and I fill the rest of my time with music, sport and a lot of volunteering.",
   intro:
-    "Computer Science and Digital Music at the University of Sydney, now doing a Master of " +
-    "Engineering (Software). I build full-stack products end to end — mobile apps, dashboards, " +
-    "APIs — and my research is on turning source code into diagrams so people can learn software " +
-    "design without writing code first. Outside of that I play bass in a band, sing in an a cappella " +
-    "society, play futsal and football, speak four languages badly-to-fluently, and volunteer at " +
-    "a food shelter most weeks.",
+    "I grew up in Bangkok, spent my last years of school in Auckland, and now I'm in Sydney — " +
+    "which is a long way of saying I've been the new kid often enough to get good at it. I did " +
+    "Computer Science and Digital Music at the University of Sydney and I'm partway through a " +
+    "Master of Engineering, writing a thesis on turning source code into diagrams so that people " +
+    "can learn how software fits together before they've written a line of it.",
+  introMore: [
+    "Most of what I know about building came from building the wrong thing first. Pickup started " +
+      "because I kept turning up to courts with nobody on them; it's now a real app in TestFlight, " +
+      "and the part I'm proudest of isn't the stack, it's that strangers use it to end up in the " +
+      "same park at the same time.",
+    "Away from a screen I play bass and sing in an indie band called Could Be Tuesday, and I spent " +
+      "two years in a barbershop a cappella society learning how much harder singing is without an " +
+      "instrument to hide behind. I play futsal and football most weeks. I volunteer with Vinnies, " +
+      "on the van and in the office, which mostly means barbecues, database entry, and the kind of " +
+      "admin nobody photographs.",
+    "I speak English and Thai, get by in Mandarin, and studied Spanish for two years before an " +
+      "exchange in Padova convinced me Italian was the one worth chasing. I've taught music to kids, " +
+      "packed down stages in the rain for touring crews, and I currently assist at a dental clinic — " +
+      "jobs that have almost nothing to do with software and everything to do with being useful to " +
+      "the person in front of you.",
+  ],
   location: "Sydney, Australia",
   email: "nano.naratorn@gmail.com",
   resumeUrl: "/resume.pdf", // TODO: drop your resume PDF into public/
   /** Set once you've added a portrait — see public/images/README.md. */
-  portrait: "", // e.g. "/images/portrait.jpg"
-  portraitAlt: "Portrait",
+  portrait: "/images/portrait-milan.jpg",
+  portraitAlt: "At Milano Centrale station, mid-exchange",
 };
 
 export const socials = [
@@ -237,10 +250,11 @@ export type Hobby = {
   title: string;
   icon: string;
   blurb: string;
-  notes: string[];
   /** Optional card photo: "/images/whatever.jpg". */
   image?: string;
   imageAlt?: string;
+  /** Set for portrait photos so the card frames them tall instead of cropping. */
+  imagePortrait?: boolean;
 };
 
 /** The other half of the site. */
@@ -251,15 +265,14 @@ export const hobbies: Hobby[] = [
     blurb:
       "Indie rock band — I play bass guitar and sing. Digital Music was half my degree, so this " +
       "isn't a side quest so much as the other half of the job.",
-    notes: ["Indie rock", "Bass & vocals", "Live shows"],
     image: "/images/band-photo.JPG",
     imageAlt: "The band at a live show",
+    imagePortrait: true,
   },
   {
     title: "Acappella",
     icon: "",
     blurb: "Sang with the Barbershop a cappella society — no instruments, all harmony.",
-    notes: ["Barbersoc", "2024 & 2025"],
   },
   {
     title: "Futsal & football",
@@ -267,7 +280,6 @@ export const hobbies: Hobby[] = [
     blurb:
       "Futsal with No Ice, and a season of football in Sydney University Men's Div 4. The reason " +
       "Pickup exists in the first place.",
-    notes: ["No Ice, 2025 & 2026", "SU Men's Div 4, 2024"],
     image: "/images/futsal-medals.jpg",
     imageAlt: "The futsal team with medals after a final at Sydney Uni",
   },
@@ -277,9 +289,9 @@ export const hobbies: Hobby[] = [
     blurb:
       "At Vinnies and at the food shelter — serving, organising events, and doing the unglamorous " +
       "admin that keeps it all running.",
-    notes: ["St Vincent de Paul", "Food shelter", "Event organising"],
     image: "/images/vinnies-van.jpg",
     imageAlt: "The Vinnies Van parked up at a community barbecue",
+    imagePortrait: true,
   },
   {
     title: "Languages",
@@ -287,7 +299,6 @@ export const hobbies: Hobby[] = [
     blurb:
       "Fluent in English and Thai, conversational Mandarin, and enough Spanish to have survived a " +
       "language exchange in Padua.",
-    notes: ["English & Thai", "Mandarin — HSK 5", "Spanish, 2 years", "Padua, Italy"],
     image: "/images/padua-certificate.jpg",
     imageAlt:
       "Holding the certificate from the Summer School of Italian Culture in Padova",
@@ -298,9 +309,9 @@ export const hobbies: Hobby[] = [
     blurb:
       "Countries collected the way other people collect records, and a list that keeps " +
       "getting longer. The map below has the full picture.",
-    notes: [`${visited.length} countries`, `${wishlist.length} on the list`],
     image: "/images/travel-bergen.jpg",
     imageAlt: "Watching the sunset over the fjords above Bergen, Norway",
+    imagePortrait: true,
   },
 ];
 
