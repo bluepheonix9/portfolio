@@ -27,9 +27,6 @@ export default function Home() {
 
   return (
     <>
-      <div className="aurora" aria-hidden />
-      <div className="grain" aria-hidden />
-
       <Nav />
 
       <main>

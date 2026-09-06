@@ -19,7 +19,7 @@ export function Section({
       <div className="mx-auto w-full max-w-5xl">
         <Reveal>
           <p className="font-mono text-sm text-muted">{eyebrow}</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-5xl">
+          <h2 className="mt-3 font-serif text-3xl font-medium tracking-tight sm:text-5xl">
             {title}
           </h2>
           {lead ? <p className="mt-4 max-w-2xl text-muted">{lead}</p> : null}

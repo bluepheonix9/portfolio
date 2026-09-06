@@ -33,7 +33,7 @@ export function Beyond() {
               <span className="text-3xl" aria-hidden>
                 {hobby.icon}
               </span>
-              <h3 className="mt-4 text-lg font-semibold tracking-tight">
+              <h3 className="mt-4 font-serif text-lg font-medium tracking-tight">
                 {hobby.title}
               </h3>
               <p className="mt-2 text-sm text-muted">{hobby.blurb}</p>

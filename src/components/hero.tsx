@@ -42,7 +42,7 @@ export function Hero() {
           initial={still ? false : "hidden"}
           animate="shown"
           variants={line}
-          className="mt-6 text-[clamp(2.75rem,7vw,5.5rem)] leading-[0.95] font-semibold tracking-tight"
+          className="mt-6 font-serif text-[clamp(2.75rem,7vw,5.5rem)] leading-[0.95] font-medium tracking-tight"
         >
           {person.name}
           <span className="block gradient-text">{person.role}</span>

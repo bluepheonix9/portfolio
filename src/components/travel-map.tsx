@@ -8,9 +8,9 @@ import { MAP_HEIGHT, MAP_WIDTH } from "@/lib/world";
 type Filter = "all" | "visited" | "wishlist";
 
 const FILL = {
-  visited: "fill-amber-300/70 hover:fill-amber-200/90",
-  wishlist: "fill-teal-300/35 hover:fill-teal-200/60",
-  none: "fill-white/[0.06] hover:fill-white/[0.12]",
+  visited: "fill-accent/75 hover:fill-accent/95",
+  wishlist: "fill-foreground/12 hover:fill-foreground/22",
+  none: "fill-foreground/5 hover:fill-foreground/10",
 } as const;
 
 export function TravelMap({ world }: { world: WorldMap }) {
@@ -63,11 +63,11 @@ export function TravelMap({ world }: { world: WorldMap }) {
 
         <ul className="flex gap-5 font-mono text-sm text-muted">
           <li className="flex items-center gap-2">
-            <span className="size-2.5 rounded-full bg-amber-300" aria-hidden />
+            <span className="size-2.5 rounded-full bg-accent" aria-hidden />
             {world.visitedCount} visited
           </li>
           <li className="flex items-center gap-2">
-            <span className="size-2.5 rounded-full bg-teal-300/60" aria-hidden />
+            <span className="size-2.5 rounded-full bg-foreground/35" aria-hidden />
             {world.wishlistCount} on the list
           </li>
         </ul>
@@ -113,8 +113,8 @@ export function TravelMap({ world }: { world: WorldMap }) {
                 r={dot.status === "visited" ? 4 : 3}
                 className={
                   dot.status === "visited"
-                    ? "fill-amber-200 stroke-amber-500/40"
-                    : "fill-teal-200/70 stroke-teal-400/30"
+                    ? "fill-accent stroke-accent/40"
+                    : "fill-foreground/45 stroke-foreground/20"
                 }
                 strokeWidth={1.5}
                 initial={still ? false : { scale: 0, opacity: 0 }}
@@ -172,13 +172,13 @@ export function TravelMap({ world }: { world: WorldMap }) {
             <span
               className={`inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-sm ${
                 place.status === "visited"
-                  ? "border-amber-200/25 text-foreground"
-                  : "border-teal-200/20 text-muted"
+                  ? "border-accent/30 text-foreground"
+                  : "border-line text-muted"
               }`}
             >
               <span
                 className={`size-2 rounded-full ${
-                  place.status === "visited" ? "bg-amber-300" : "bg-teal-300/60"
+                  place.status === "visited" ? "bg-accent" : "bg-foreground/35"
                 }`}
                 aria-hidden
               />

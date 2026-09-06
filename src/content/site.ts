@@ -54,7 +54,6 @@ export type Project = {
   href?: string;
   repo?: string;
   year: string;
-  accent: string;
   role?: string;
   /** Drop the file in public/images/ and reference it as "/images/name.jpg". */
   image?: string;
@@ -73,7 +72,6 @@ export const projects: Project[] = [
     tags: ["Expo SDK 54", "React Native", "Supabase", "TestFlight"],
     repo: "https://github.com/bluepheonix9/resona",
     year: "2026",
-    accent: "from-amber-300 to-rose-300",
     // image: "/images/pickup.jpg",
     // imageAlt: "The Pickup app showing nearby games",
   },
@@ -86,7 +84,6 @@ export const projects: Project[] = [
       "bringing attention to suicide prevention. The challenge is planned for November 2026.",
     tags: ["React", "Next.js", "Supabase", "Vercel"],
     year: "2026",
-    accent: "from-teal-300 to-emerald-300",
   },
   {
     title: "National School Socioeconomic AI Dashboard",
@@ -97,7 +94,6 @@ export const projects: Project[] = [
       "socioeconomic backgrounds, using measures including ICSEA, ATAR and STEM enrolment.",
     tags: ["FastAPI", "PostgreSQL", "React", "Next.js", "Docker", "Azure"],
     year: "2025",
-    accent: "from-violet-300 to-indigo-300",
   },
   {
     title: "Sydney Interplanetary Rover Initiative",
@@ -107,7 +103,6 @@ export const projects: Project[] = [
       "the team share its work and reach a wider audience.",
     tags: ["CMS", "JavaScript", "Tailwind", "Next.js", "React"],
     year: "2024",
-    accent: "from-sky-300 to-cyan-300",
   },
 ];
 
