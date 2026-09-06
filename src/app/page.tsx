@@ -102,7 +102,7 @@ export default function Home() {
           id="travel"
           eyebrow="09 — Travel"
           title="Where I've been"
-          lead="2 of the 7 wonders so far. Hover over a country for the story. The blue ones are the places I'm hoping to get to next."
+          lead="2 of the 7 wonders so far. Hover over a country for the story. The gray ones are the places I'm hoping to get to next."
         >
           <Reveal>
             <TravelMap world={world} />
