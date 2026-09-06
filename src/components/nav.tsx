@@ -35,7 +35,10 @@ export function Nav() {
         }`}
       >
         <a href="#top" className="font-mono text-sm tracking-tight">
-          {person.handle}
+          {person.name
+            .split(" ")
+            .map((word) => word[0])
+            .join("")}
         </a>
 
         <ul className="hidden items-center gap-1 md:flex">

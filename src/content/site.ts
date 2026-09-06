@@ -6,39 +6,29 @@
 export const person = {
   // Taken from your Padova certificate — change if you'd rather go by something else.
   name: "Naratorn Pisedtasalasai",
-  handle: "@nano",
-  role: "Software Engineer",
-  tagline:
-    "I like building things people actually use. When I'm not coding, you'll usually find me " +
-    "playing music, playing sport, or volunteering somewhere.",
+  role: "Master Student/Software Engineer",
+  availability: "available for part-time work",
   intro:
-    "I grew up in Bangkok, went to school in Auckland, and ended up in Sydney. So I've had " +
-    "plenty of practice being the new kid. Somewhere along the way, I got pretty comfortable " +
-    "with it.",
+    "I was born in Christchurch, grew up in Bangkok, went to school in Auckland, and ended up " +
+    "in Sydney. I'm still finding my way and trying to enjoy the ride.",
   introMore: [
-    "I studied Computer Science and Digital Music at the University of Sydney and I'm now " +
-      "partway through a Master of Engineering. My thesis is about turning source code into " +
-      "diagrams, with the idea that people should be able to understand how software fits " +
-      "together before they have to write it themselves.",
-    "Most of what I've learned about building things came from building the wrong thing first. " +
-      "Pickup started because I kept turning up to public courts and finding nobody there. Now " +
-      "it's a real app in TestFlight. The bit I'm happiest about isn't the technology behind it. " +
-      "It's that people who didn't know each other can open the app, find a game, and end up " +
-      "playing together in the same park.",
+    "I studied my bachelor's in computer science and digital music at the University of Sydney, " +
+      "and now doing a Master of Engineering (Software). My passion is to use my skills to make " +
+      "the world a better place, whether it's building an app for people to play sports, " +
+      "running a charity for mental health, performing in a band to entertain the crowd. Even " +
+      "if it's a little thing, it can go a long way.",
     "Away from a screen, I play bass and sing in an indie band called Could Be Tuesday. I also " +
-      "spent two years singing in a barbershop a cappella society, which taught me just how " +
-      "exposed you feel when there isn't an instrument to hide behind. I play futsal and " +
-      "football most weeks too.",
-    "I also volunteer with Vinnies, both on the van and in the office. That usually means some " +
-      "combination of barbecues, database work, organising things, and doing the jobs that " +
+      "spent two years singing in a barbershop a cappella society, I grew up as a music kid and " +
+      "it's one of those things that keep me going.",
+    "I also volunteer with Vinnies, at the Redfern Vinnies Support Centre. That usually means " +
+      "some combination of barbecues, database work, organising things, and doing the jobs that " +
       "aren't particularly exciting but still need someone to do them.",
     "I speak English and Thai, can hold my own in Mandarin, and spent two years learning " +
-      "Spanish before an exchange in Padova convinced me that Italian was the language I wanted " +
-      "to keep going with.",
-    "I've taught music to kids, helped touring crews pack down stages in the rain, and now work " +
-      "part time at a dental clinic. None of those jobs have much to do with software. All of " +
-      "them have taught me something about being useful, working with people, and getting stuck " +
-      "in when something needs doing.",
+      "Spanish and a tad bit of Italian (basically just Ciao now).",
+    "I've done an unusual combination of jobs. Music tutoring, helping touring crews pack down " +
+      "stages in the rain, digital marketing, and now working part time at a dental clinic as a " +
+      "dental assistant. None of those jobs have much to do with software. All of them have " +
+      "given me experience that I could not have gotten elsewhere.",
   ],
   location: "Sydney, Australia",
   email: "nano.naratorn@gmail.com",
@@ -111,11 +101,11 @@ export const projects: Project[] = [
   },
   {
     title: "Sydney Interplanetary Rover Initiative",
-    role: "Lead developer",
+    role: "Lead website developer",
     blurb:
       "Led development of the Initiative's website and CMS, then deployed the platform to help " +
       "the team share its work and reach a wider audience.",
-    tags: ["CMS", "Web"],
+    tags: ["CMS", "JavaScript", "Tailwind", "Next.js", "React"],
     year: "2024",
     accent: "from-sky-300 to-cyan-300",
   },
@@ -123,11 +113,12 @@ export const projects: Project[] = [
 
 export const research = {
   title: "Structural Fingerprinting for Automated UML Reverse Engineering",
-  subtitle: "An AST-to-Vector Approach",
+  subtitle: "Strategy to reduce use of LLMs in coding",
   blurb:
-    "My thesis looks at how source code can be turned into vector diagrams automatically. The " +
-    "bigger idea is an education web app where students can learn how software is structured by " +
-    "building and exploring UML diagrams, rather than being thrown straight into a code editor.",
+    "My thesis looks at how source code can be turned into UML and activity diagrams without " +
+    "the use of Large Language Models (LLMs). The solution could be game-changing for project " +
+    "managers who want to build websites and applications, using a tool that would cost " +
+    "substantially less — both energy- and money-wise — than LLMs.",
   tags: ["AST", "UML", "Vectors", "Education"],
 };
 
@@ -209,6 +200,14 @@ export const community: Chapter[] = [
       "projects and initiatives and getting more people involved.",
   },
   {
+    when: "Sep 2026",
+    what: "Judge",
+    where: "Hack for Humanity Hackathon",
+    detail:
+      "Helped organise and judge the Hack for Humanity competition, judging teams on " +
+      "creativity, social impact, and technical execution.",
+  },
+  {
     when: "Mar 2026 — present",
     what: "Administration Volunteer",
     where: "St Vincent de Paul Society",
@@ -262,16 +261,16 @@ export const education: Chapter[] = [
     what: "Summer School of Italian Culture",
     where: "Università degli Studi di Padova",
     detail:
-      "The 8th edition of the Scuola estiva di cultura italiana, run with the University of " +
-      "Sydney. Three days in Padova, and somehow enough to make Italian stick better than the " +
-      "two years of Spanish that came before it.",
+      "Did a 2-week summer exchange program at the University of Padua studying Italian " +
+      "culture and language.",
   },
   {
     when: "School",
     what: "King's College",
     where: "Auckland, New Zealand",
     detail:
-      "After International Community School, Bangkok and Concordian International School, Bangkok.",
+      "Before that studied at the International Community School, Bangkok and Concordian " +
+      "International School, Bangkok.",
   },
 ];
 
@@ -290,8 +289,8 @@ export const hobbies: Hobby[] = [
     title: "Could Be Tuesday",
     icon: "",
     blurb:
-      "Indie rock band. I play bass and sing. I studied Digital Music at university, so music " +
-      "has never really felt like a side project. It's just the other half of what I do.",
+      "Indie rock band. I play bass and sing. I did a major in Digital Music at university, so " +
+      "music has never really felt like a side project. It's just the other half of what I do.",
     image: "/images/band-photo.JPG",
     imageAlt: "The band at a live show",
   },
@@ -299,8 +298,8 @@ export const hobbies: Hobby[] = [
     title: "Acappella",
     icon: "",
     blurb:
-      "I sang with a barbershop a cappella society for two years. No instruments, no hiding, " +
-      "just a lot of harmony and trying not to be the person who comes in on the wrong note.",
+      "I sang with a barbershop a cappella society for two years. I made great friends, and " +
+      "learnt a lot about self confidence through my singing.",
     image: "/images/acappella.jpg",
     imageAlt: "Singing lead at an a cappella showcase",
   },
@@ -308,8 +307,8 @@ export const hobbies: Hobby[] = [
     title: "Futsal & football",
     icon: "",
     blurb:
-      "Futsal with No Ice, plus a season of football with Sydney University Men's Div 4. Also, " +
-      "pretty much the reason Pickup exists.",
+      "Futsal with No Ice, plus a season of football with Sydney University Men's Div 4. Not " +
+      "the best at football, but always an excuse to catch up with mates.",
     image: "/images/futsal-medals.jpg",
     imageAlt: "The futsal team with medals after a final at Sydney Uni",
   },
@@ -327,8 +326,7 @@ export const hobbies: Hobby[] = [
     title: "Languages",
     icon: "🗣️",
     blurb:
-      "Fluent in English and Thai, conversational Mandarin, and enough Spanish to have survived " +
-      "a language exchange in Padova. I'm still working on the Italian.",
+      "Fluent in English and Thai, conversational Mandarin, and a bit of Spanish and Italian.",
     image: "/images/padua-certificate.jpg",
     imageAlt:
       "Holding the certificate from the Summer School of Italian Culture in Padova",
@@ -337,9 +335,7 @@ export const hobbies: Hobby[] = [
     title: "Travel",
     icon: "🌏",
     blurb:
-      "I collect countries a bit like other people collect records. The list keeps getting " +
-      "longer, and I'm not particularly interested in stopping. The map below has the full " +
-      "picture.",
+      "Travel is basically the reason I work. The map below has the full picture.",
     image: "/images/travel-bergen.jpg",
     imageAlt: "Watching the sunset over the fjords above Bergen, Norway",
   },

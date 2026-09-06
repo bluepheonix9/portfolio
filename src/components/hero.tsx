@@ -34,7 +34,7 @@ export function Hero() {
           variants={line}
           className="font-mono text-sm text-muted"
         >
-          {person.location} · available for work
+          {person.location} · {person.availability}
         </motion.p>
 
         <motion.h1
@@ -48,18 +48,8 @@ export function Hero() {
           <span className="block gradient-text">{person.role}</span>
         </motion.h1>
 
-        <motion.p
-          custom={2}
-          initial={still ? false : "hidden"}
-          animate="shown"
-          variants={line}
-          className="mt-8 max-w-2xl text-lg text-muted sm:text-xl"
-        >
-          {person.tagline}
-        </motion.p>
-
         <motion.div
-          custom={3}
+          custom={2}
           initial={still ? false : "hidden"}
           animate="shown"
           variants={line}
@@ -80,7 +70,7 @@ export function Hero() {
         </motion.div>
 
         <motion.ul
-          custom={4}
+          custom={3}
           initial={still ? false : "hidden"}
           animate="shown"
           variants={line}

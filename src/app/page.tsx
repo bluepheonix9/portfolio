@@ -68,7 +68,7 @@ export default function Home() {
         <Section
           id="community"
           eyebrow="05 — Community"
-          title="Where I show up"
+          title="What I do in my spare time"
           lead="The societies, volunteering and teams I've ended up spending my time with."
         >
           <Timeline chapters={community} />
@@ -85,9 +85,9 @@ export default function Home() {
 
         <Section
           id="stack"
-          eyebrow="07 — Tools"
+          eyebrow="07 — Skills"
           title="What I reach for"
-          lead="The tools I've spent enough time with to have opinions about them."
+          lead="Skills and Tools that I have developed over the years."
         >
           <Stack />
         </Section>
@@ -105,7 +105,7 @@ export default function Home() {
           id="travel"
           eyebrow="09 — Travel"
           title="Where I've been"
-          lead="Bangkok to Auckland to Sydney, with quite a few stops in between. Hover over a country for the story. The faded ones are the places I'm hoping to get to next."
+          lead="2 of the 7 wonders so far. Hover over a country for the story. The blue ones are the places I'm hoping to get to next."
         >
           <Reveal>
             <TravelMap world={world} />
@@ -150,9 +150,6 @@ export default function Home() {
         <div className="mx-auto flex max-w-5xl flex-wrap justify-between gap-4 font-mono text-sm text-muted">
           <span>
             © {new Date().getFullYear()} {person.name}
-          </span>
-          <span>
-            Built with Next.js, Tailwind and probably too much coffee.
           </span>
         </div>
       </footer>
