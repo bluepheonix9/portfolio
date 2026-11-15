@@ -127,14 +127,17 @@ export const projects: Project[] = [
 ];
 
 export const research = {
-  title: "Structural Fingerprinting for Automated UML Reverse Engineering",
-  subtitle: "Strategy to reduce use of LLMs in coding",
+  title:
+    "State Diagrams as Compressed Context for LLM-Based Feature Addition in React and " +
+    "TypeScript Applications",
+  subtitle: "Helping LLMs add features with fewer tokens",
   blurb:
-    "My thesis looks at how source code can be turned into UML and activity diagrams without " +
-    "the use of Large Language Models (LLMs). The solution could be game-changing for project " +
-    "managers who want to build websites and applications, using a tool that would cost " +
-    "substantially less — both energy- and money-wise — than LLMs.",
-  tags: ["AST", "UML", "Vectors", "Education"],
+    "My thesis asks whether a Large Language Model (LLM) can add a feature to a React and " +
+    "TypeScript app as reliably when it's given automatically extracted state diagrams, plus " +
+    "only the files it needs to edit, as when it's given the raw code. UI components behave " +
+    "like state machines, so a state diagram can summarise them in far fewer tokens. If it " +
+    "works, adding features with LLMs could cost less, in both energy and money.",
+  tags: ["LLMs", "State diagrams", "AST", "React + TypeScript"],
 };
 
 export const stack = [
@@ -272,7 +275,7 @@ export const education: Chapter[] = [
     when: "Now",
     what: "Master of Engineering (Software)",
     where: "University of Sydney",
-    detail: "Researching automated UML reverse engineering from source code.",
+    detail: "Researching state diagrams as compressed context for LLM feature addition.",
   },
   {
     when: "Graduated",
