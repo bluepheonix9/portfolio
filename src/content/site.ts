@@ -96,6 +96,16 @@ export const projects: Project[] = [
     year: "2026",
   },
   {
+    title: "DIY Instrument Tuning Pedal",
+    role: "Innovator",
+    blurb:
+      "A tuning pedal for guitar and bass that I'm currently building myself. That means " +
+      "building the circuits, writing the software and 3D printing the parts, which brings the " +
+      "engineering side of what I do together with the music side.",
+    tags: ["Electronics", "Software", "3D printing", "In progress"],
+    year: "2026",
+  },
+  {
     title: "National School Socioeconomic AI Dashboard",
     role: "Biotech Futures",
     blurb:
