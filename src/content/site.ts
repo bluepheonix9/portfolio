@@ -167,7 +167,7 @@ export const experience: Chapter[] = [
   {
     when: "Oct 2026 — present",
     what: "Software Developer Intern",
-    where: "Moreneta Initiative",
+    where: "The Moreneta Initiative",
     detail:
       "Built Moreneta's free directory of homelessness and support services, using FastAPI and " +
       "Jinja templates, plain JavaScript and MapLibre maps. I lead front-end development, built " +
