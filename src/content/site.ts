@@ -86,6 +86,16 @@ export const projects: Project[] = [
     year: "2026",
   },
   {
+    title: "Wander",
+    role: "Full-stack developer",
+    blurb:
+      "A trip planner for groups. Plan an itinerary together, split shared costs and export the " +
+      "final plan to your calendar. I built the Explore page, with a 3D globe, country maps and " +
+      "place suggestions, plus the shared packing list and profile photos.",
+    tags: ["React", "Spring Boot", "MySQL", "Material UI", "Leaflet", "Three.js"],
+    year: "2026",
+  },
+  {
     title: "National School Socioeconomic AI Dashboard",
     role: "Biotech Futures",
     blurb:
@@ -141,6 +151,15 @@ export type Chapter = {
 };
 
 export const experience: Chapter[] = [
+  {
+    when: "Oct 2026 — present",
+    what: "Software Developer Intern",
+    where: "Moreneta Initiative",
+    detail:
+      "Built Moreneta's free directory of homelessness and support services, using FastAPI and " +
+      "Jinja templates, plain JavaScript and MapLibre maps. I lead front-end development, built " +
+      "the CRM, and coordinate outreach.",
+  },
   {
     when: "Aug 2026 — present",
     what: "Dental Assistant & Administration",
